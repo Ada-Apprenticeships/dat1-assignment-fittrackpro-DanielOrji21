@@ -35,6 +35,21 @@
 
 PRAGMA foreign_keys = ON;
 
+.tables
+
+DROP TABLE IF EXISTS equipment_maintenance_log;
+DROP TABLE IF EXISTS member_health_metrics;
+DROP TABLE IF EXISTS personal_training_sessions;
+DROP TABLE IF EXISTS payments;
+DROP TABLE IF EXISTS class_attendance;
+DROP TABLE IF EXISTS attendance;
+DROP TABLE IF EXISTS memberships;
+DROP TABLE IF EXISTS class_schedule;
+DROP TABLE IF EXISTS classes;
+DROP TABLE IF EXISTS equipment;
+DROP TABLE IF EXISTS staff;
+DROP TABLE IF EXISTS members;
+DROP TABLE IF EXISTS locations;
 
 CREATE TABLE locations 
 (
@@ -46,7 +61,6 @@ CREATE TABLE locations
     opening_hours TEXT
 );
 
--- Create the 'members' table
 CREATE TABLE members
 (
     member_id INTEGER PRIMARY KEY,
@@ -91,7 +105,7 @@ CREATE TABLE classes
     name TEXT NOT NULL,
     description TEXT,
     capacity INTEGER,
-    duration INTEGER, -- Consider specifying units (e.g., minutes)
+    duration INTEGER,
     location_id INTEGER,
     FOREIGN KEY (location_id) REFERENCES locations(location_id) 
 );
@@ -145,7 +159,7 @@ CREATE TABLE payments
     member_id INTEGER,
     amount REAL, 
     payment_date DATE,
-    payment_method TEXT CHECK (payment_method IN ('Credit Card', 'Bank Transfer', 'PayPal')),
+    payment_method TEXT CHECK (payment_method IN ('Credit Card', 'Bank Transfer', 'PayPal', 'Cash')),
     payment_type TEXT CHECK (payment_type IN ('Monthly membership fee', 'Day pass')),
     FOREIGN KEY (member_id) REFERENCES members(member_id) 
 );
@@ -185,3 +199,4 @@ CREATE TABLE equipment_maintenance_log
     FOREIGN KEY (equipment_id) REFERENCES equipment(equipment_id),
     FOREIGN KEY (staff_id) REFERENCES staff(staff_id)
 );
+
