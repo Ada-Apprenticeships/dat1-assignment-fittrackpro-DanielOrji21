@@ -1,8 +1,7 @@
 -- FitTrack Pro Database Schema
 
 -- Initial SQLite setup
-.open fittrackpro.sqlite
-.mode column
+
 
 -- Enable foreign key support
 
@@ -32,6 +31,8 @@
 -- After creating the tables, you can import the sample data using:
 -- `.read data/sample_data.sql` in a sql file or `npm run import` in the terminal
 
+.open fittrackpro.sqlite
+.mode column
 
 PRAGMA foreign_keys = ON;
 
