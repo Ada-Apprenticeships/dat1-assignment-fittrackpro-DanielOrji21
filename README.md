@@ -247,17 +247,17 @@ Use this as a checklist to keep track of your progress.
 3. [x] 5.3 Identify members with expiring memberships this year
 
 #### 6. Attendance Tracking (attendance_tracking.sql)
-1. [ ] 6.1 Record a member's gym visit
-2. [ ] 6.2 Retrieve a member's attendance history
-3. [ ] 6.3 Find the busiest day of the week based on gym visits
-4. [ ] 6.4 Calculate the average daily attendance for each location
+1. [x] 6.1 Record a member's gym visit
+2. [x] 6.2 Retrieve a member's attendance history
+3. [x] 6.3 Find the busiest day of the week based on gym visits
+4. [x] 6.4 Calculate the average daily attendance for each location
 
 #### 7. Staff Management (staff_management.sql)
-1. [ ] 7.1 List all staff members by role
-2. [ ] 7.2 Find trainers with one or more personal training session in the next 30 days
+1. [x] 7.1 List all staff members by role
+2. [x] 7.2 Find trainers with one or more personal training session in the next 30 days
 
 #### 8. Personal Training (personal_training.sql)
-1. [ ] 8.1 List all personal training sessions for a specific trainer
+1. [x] 8.1 List all personal training sessions for a specific trainer
 
 ## Task Details
 
